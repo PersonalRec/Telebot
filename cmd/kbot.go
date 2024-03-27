@@ -28,7 +28,7 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Printf("GPT-telebot %s started", appVersion)
-		kbot, err := telebot.Newbot(telebot.Settings{
+		kbot, err := telebot.NewBot(telebot.Settings{
 			URL:    "",
 			Token:  TeleToken,
 			Poller: &telebot.LongPoller{Timeout: 10 * time.Second},
@@ -47,4 +47,8 @@ to quickly create a Cobra application.`,
 
 		kbot.Start()
 	},
+}
+
+func init() {
+	rootCmd.AddCommand(kbotCmd)
 }
