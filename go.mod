@@ -1,5 +1,4 @@
-module github.com/PersonalRec/Telebot
-
+module github.com/PersonalRec/kbot
 go 1.22.0
 
 require (
