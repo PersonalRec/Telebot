@@ -6,12 +6,13 @@ ChatGPT-based bot for Telegram
 
 1. Create a github repository, e.g. github.com/PersonalRec/Telebot
 2. Clone the repository.
-    git clone github.com/PersonalRec/Telebot
+    git clone github.com/PersonalRec/kbot
 3. Initialize the new go module.
-    git init github.com/PersonalRec/Telebot
-4. Add Telebot to your dependencies.
+    git init github.com/PersonalRec/kbot
+4. Add Telebot to your dependencies. Install cobra.
     #go get -u gopkg.in/tucnak/telebot.v2
     go get -u gopkg.in/telebot.v3  <-- use this one
+    go install github.com/spf13/cobra-cli@latest
 7. Create the main.go file. Input some code.
     touch main.go
 5. Create the "cmd" folder, enter it, and create the kbot.go file. Input some code.
@@ -50,5 +51,8 @@ ChatGPT-based bot for Telegram
     git commit -am
     git push
     go build -ldflags "-X="github.com/PersonalRec/kbot/cmd.appVersion=v1.0.2
-15. Start the app.
+15. Set again the API variable. Start the app.
+    read -s TELE_TOKEN
+    <telegram_api_token>
+    export TELE_TOKEN
     ./kbot start
