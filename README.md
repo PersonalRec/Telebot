@@ -45,5 +45,10 @@ ChatGPT-based bot for Telegram
 13. Export the variable end start our bot.
     export TELE_TOKEN
     ./kbot start
-14. Add some more code to the kbot.go file. Push everything to the repo. Build new binary file.
-    
+14. Add some more code to the kbot.go file. Push everything to the repo. Build new binary file. 
+    git add .
+    git commit -am
+    git push
+    go build -ldflags "-X="github.com/PersonalRec/kbot/cmd.appVersion=v1.0.2
+15. Start the app.
+    ./kbot start
