@@ -33,5 +33,17 @@ ChatGPT-based bot for Telegram
     gofmt -s -w ./
     cd cmd
     go get
-9. Build our programm to make a binary file.
-    go build -ldflags "-X="github.com/PersonalRec/Telebot/cmd.appVersion=v1.0.1
+9. Go to the root directory. Build our programm to make a binary file.
+    go build -ldflags "-X="github.com/PersonalRec/kbot/cmd.appVersion=v1.0.1
+10. Test the bot with the "start" command.
+    ./kbot start
+11. Make bot settings with the BotFather from Telegram. Get the API key.
+12. Read the API key in a safe manner. Look at the variable.
+    read -s TELE_TOKEN
+    <telegram_api_token>
+    echo $TELE_TOKEN
+13. Export the variable end start our bot.
+    export TELE_TOKEN
+    ./kbot start
+14. Add some more code to the kbot.go file. Push everything to the repo. Build new binary file.
+    
